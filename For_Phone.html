@@ -1,0 +1,2937 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPPER ROOM - Our Church Official Website Platform...</title>
+    <link rel="icon" type="image/x-icon" href="./Pictures/logo.png">
+</head>
+<div class="display-pag" id="load-page">
+    <p class="display-page"><span class="dis-one">F</span><span class="dis-three">P</span><span class="dis-three">H</span></p>
+</div>
+<script>
+    let loaded = false;
+    let timeoutReached = false;
+
+    // this is for loading the page...
+    window.addEventListener('load', function() {
+        loaded = true;
+        if (timeoutReached) {
+            document.getElementById('load-page').style.display = 'none';
+        }
+    });
+
+    // this is for the time setting...
+    setTimeout(function() {
+        timeoutReached = true;
+        if (loaded) {
+            document.getElementById('load-page').style.display = 'none';
+        }
+    }, 25000); // 1000 milliseconds = 1 second
+
+    // this is for the color toogle
+    let index = 0;
+
+    setInterval(function() {
+        let spans = document.querySelectorAll('.display-page span');
+        spans.forEach((span) => {
+            span.classList.remove('pink');
+        });
+        spans[index].classList.add('pink');
+        index = (index + 1) % 3;
+    }, 1200);
+</script>
+
+<body>
+
+    <header class="test-one">
+        <div class="div-launch">
+            <div class="launch-one">
+                <img class="play-that" src="./Pictures/logo.png" alt="redeem picture">
+                <div class="div-type-one">
+                    <p class="par-type-one">Upperroom</p>
+                    <p class="par-type-two">Mega Chapel</p>
+                    <p class="par-type-three">Province 102</p>
+                </div>
+                <nav class="nav-tht-one">
+                    <ul>
+                        <li><img src="./Icons-representations/icons8-whatsapp-80.png" class="img-tht-one"></li>
+                        <li><img src="./Icons-representations/menufowwwwwwww - Co22py.png" class="img-tht-two" onclick="MenuContainer()"></li>
+                        <div class="menu-bar" style="display: none;">
+                            <img src="./Icons-representations/back.png" class="menu-bar-img" id='Seq-back'>
+                            <script>
+                                // for the back sequence
+                                document.getElementById('Seq-back').addEventListener('click', function() {
+                                    var menuBar = document.querySelector('.menu-bar');
+                                    if (menuBar) {
+                                        menuBar.style.display = 'none';
+                                    }
+                                });
+                            </script>
+                            <img src="./Icons-representations/8edfb615-ecb1-43c8-95e5-0c2c24eee251 - Copy.png" class="menu-bar-img-one">
+                            <button class="menu-but-one" onclick="RegContainer()"><img src="./Icons-representations/Unaaaaaatitled.png" class="menu-bar-img-two">REGISTER</button>
+                            <div style="display: none;" class="reg-div">
+                                <div class="sub-reg-div-one">
+                                    <div class="sub-reg-div-two">
+                                        <img src="./Icons-representations/back.png" class="reg-div-one" id="Reg-test-play">
+                                        <p class="reg-par-one">Register for upperroom events here.</p>
+                                        <button class="but-reg-one"><span class="sp-reg-one">SELECT YOUR EVENT</span><img src="./Icons-representations/Untqqqqqqqqqqqqqqitled.png" class="reg-ui-one"></button>
+                                        <button class="but-reg-two"><span class="sp-reg-two">DATE OF THE EVENT</span><img src="./Icons-representations/Untqqqqqqqqqqqqqqitled.png" class="reg-ui-one"></button>
+                                        <p class="reg-par-two">Register for your event here on our</p>
+                                        <p class="reg-par-three">upperroom platform.</p>
+                                        <button class="but-reg-three">REGISTER</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <script>
+                                // code for menu...
+                                function RegContainer() {
+                                    var container_four = document.querySelector(".reg-div");
+                                    container_four.style.display = container_four.style.display == "block" ? "none" : "block";
+                                }
+
+                                // this is for the exit sequence...
+                                document.getElementById('Reg-test-play').addEventListener('click', function() {
+                                    var menuDiv = document.querySelector('.reg-div');
+                                    if (menuDiv) {
+                                        menuDiv.style.display = menuDiv.style.display === 'none' ? '' : 'none';
+                                    }
+                                });
+                            </script>
+                            <button class="menu-but-two" onclick="AdminContainer()">ADMINS/REPS<img src="./Icons-representations/Untcccccccitled.png" class="menu-bar-img-three"></button>
+                            <div style="display: none;" class="admin-div">
+                                <img src="./Pictures/logo.png" class="admin-img-one">
+                                <p class="admin-par-one">Welcome</p>
+                                <p class="admin-par-two">Sign in to continue</p>
+                                <button class="admin-but-one"><span class="sp-admin-1">USERNAME</span><img src="./Icons-representations/message.png" class="admin-img-two"><input class="admin-ipt-one" type="email"></button>
+                                <button class="admin-but-two"><span class="sp-admin-1">PASSWORD</span><img src="./Icons-representations/passwords.png" class="admin-img-two"><input class="admin-ipt-one" type="password"></button>
+                                <button class="admin-but-three"><span class="sp-admin-2">LOGIN</span><img></button>
+                                <p class="admin-pass">This back door is only used by admins...</p>
+                            </div>
+                            <script>
+                                // code for menu...
+                                function AdminContainer() {
+                                    var container_five = document.querySelector(".admin-div");
+                                    container_five.style.display = container_five.style.display == "block" ? "none" : "block";
+                                }
+                            </script>
+                            <button class="menu-but-three" onclick="SchContainer()">SHEDULE<img src="./Icons-representations/request23.png" class="menu-bar-img-four"></button>
+                            <div style="display: none;" class="sch-div">
+                                <div class="sub-sch-div"><img src="./Pictures/for_you.jpg" class="sch-img-1">
+                                    <button class="sch-but-1">Get Started</button></div>
+                                <nav class="sch-nav-1">
+                                    <ul>
+                                        <li>.</li>
+                                        <li>.</li>
+                                        <li>.</li>
+                                        <li>.</li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <script>
+                                // code for menu...
+                                function SchContainer() {
+                                    var container_five = document.querySelector(".sch-div");
+                                    container_five.style.display = container_five.style.display == "block" ? "none" : "block";
+                                }
+                            </script>
+                            <button class="menu-but-four">CONTACT<img src="./Icons-representations/Untitlgggggged.png" class="menu-bar-img-five"></button>
+                            <nav class="menu-bar-nav">
+                                <ul>
+                                    <li><button class="bnt-one" onclick="LiveContainer()">EVENTS UPDATE</button></li>
+                                    <li><button class="bnt-two"><img src="./Icons-representations/calls2 - Copy.png" class="menu-bar-img-test">+234 000 000 0000</button></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <script>
+                            // code for menu...
+                            function MenuContainer() {
+                                var container_one = document.querySelector(".menu-bar");
+                                container_one.style.display = container_one.style.display == "block" ? "none" : "block";
+                            }
+                        </script>
+                    </ul>
+                </nav>
+            </div>
+
+
+            <p class="test-two">Upper Room</p>
+            <p class="test-test">Mega Chapel.</p>
+            <p class="test-five">It is he that buildeth his stories in the heaven, and</p>
+            <p class="test-five-test">hath founded his troop in the earth; he that</p>
+            <p class="test-five-test">calleth for the waters of the sea, and poureth them</p>
+            <p class="test-five-test">upon the face of the earth: The Lord is his name.</p>
+            <p class="test-five-test">Amos 9.6</p>
+
+            <nav class="heat-one">
+                <ul>
+                    <li><img src="./Icons-representations/line1.png" alt="for the line deviation"></li>
+                    <li><img src="./Icons-representations/line1.png" alt="for the line deviation"></li>
+                    <li><img src="./Icons-representations/line1.png" alt="for the line deviation"></li>
+                </ul>
+            </nav>
+            <nav class='nav-str'>
+                <ul>
+                    <li>
+                        <nav class="nav-str-one">
+                            <ul>
+                                <li class="list-par-one">MEMBERS</li>
+                                <li class="list-is"><span class="sp-three">200</span>+</li>
+                            </ul>
+                        </nav>
+                    </li>
+                    <li>
+                        <nav class="nav-str-two">
+                            <ul>
+                                <li class="list-par-two">MINISTERS</li>
+                                <li class="list-is"><span class="sp-four">6</span>+</li>
+
+                            </ul>
+                        </nav>
+                    </li>
+                    <li>
+                        <nav class="nav-str-three">
+                            <ul>
+                                <li class="list-par-two">COUNSELORS</li>
+                                <li class="list-is"><span class="sp-four">...</span></li>
+                            </ul>
+                        </nav>
+                    </li>
+                </ul>
+            </nav>
+            <img src="./Icons-representations/multimedia-09-64.png" class="img-tro-one" onclick="window.location.href='https://www.google.com/maps/search/26+akinyemi+street+giwa+oke-aro+ogun+state/@6.686655,3.3253223,17z?entry=ttu&g_ep=EgoyMDI1MDkyMi4wIKXMDSoASAFQAw%3D%3D';">
+
+            <nav class="dot-rep">
+                <ul>
+                    <li>
+                        <p class="dot-class">.</p>
+                    </li>
+                    <li class="dot-class">.</li>
+                    <li class="dot-class">.</li>
+                    <li class="dot-class">.</li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+    <div class="div-test-one">
+        <button class="live-plug" onclick="LiveContainer()">WATCH LIVE</button>
+        <div class="menu-div-one" style="display: none;">
+            <div class="live-div-one">
+                <img src="./Icons-representations/out.png" class="live-img-one" id="live-img-play">
+                <p class="live-par-one">ONLINE PROGRAMS</p>
+                <p class="live-par-two">List of online upcoming events</p>
+                <p class="live-par-three">this week.</p>
+                <div class="live-div-two">
+                    <nav class="live-nav-one">
+                        <ul>
+                            <li><input type="checkbox"></li>
+                            <li>
+                                <p class="live-list-one">Select your program.</p>
+                            </li>
+                        </ul>
+                    </nav>
+                    <p class="live-par-four">No Programs Availiable.</p>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // for the live stream...
+            function LiveContainer() {
+                var container_two = document.querySelector(".menu-div-one");
+                container_two.style.display = container_two.style.display == "block" ? "none" : "block";
+            }
+
+
+            // this is for the exit sequence...
+            document.getElementById('live-img-play').addEventListener('click', function() {
+                var menuDiv = document.querySelector('.menu-div-one');
+                if (menuDiv) {
+                    menuDiv.style.display = menuDiv.style.display === 'none' ? '' : 'none';
+                }
+            });
+        </script>
+        <nav class="nav-in-one">
+            <ul>
+                <li><img src="./Icons-representations/icons8deeeeeee-circle-100.png" class="img-ret-one" onclick="window.location.href='https://www.youtube.com/@rccglive';"></li>
+                <li><img src="./Icons-representations/icons8-sssssscircle-100.png" class="img-ret-one" onclick="window.location.href='https://www.instagram.com/rccgorg/?hl=en';"></li>
+                <li><img src="./Icons-representations/icons8-circvvvvvle-100.png" class="img-ret-one" onclick="window.location.href='https://web.facebook.com/rccg.org/?_rdc=1&_rdr#';"></li>
+                <li><img src="./Icons-representations/icons8-ccccircle-100.png" class="img-ret-one" onclick="window.location.href='https://www.tiktok.com/tag/rccgpsfofficial';"></li>
+            </ul>
+        </nav>
+        <p class="parag-one">Come and worship</p>
+        <p class="parag-two">with us, Here at</p>
+        <p class="parag-three">Upperroom Chapel..</p>
+        <p class="para-one">PROPHETIC SHOUT</p>
+        <p class="para-two">My help cometh from</p>
+        <p class="para-three">the lord, which made</p>
+        <p class="para-four">heaven and earth.</p>
+        <p class="para-five">Psalm 121:2</p>
+        <img src="./Pictures/thanks_four.jpg" class="daddy-pic-one">
+    </div>
+    <p class="par-type-five">WHAT WE DO..</p>
+    <p class="par-type-six">Welcome To Our Church</p>
+    <nav class="nav-type-three">
+        <ul>
+            <li>
+                <div class="div-type-six">
+                    <img src="./Icons-representations/people23.webp" class="img-type-one">
+                    <p class="par-type-nine">Worship God</p>
+                    <p class="par-type-ten">Come and worship God with us here</p>
+                    <p class="par-type-tan">at upperroom mega chapel.</p>
+                    <p class="par-type-tan">To all our esteemed guests..</p>
+                    <p class="par-type-tan">We highly welcome you.</p>
+
+                </div>
+            </li>
+            <li>
+                <div class="div-type-six"> <img src="./Icons-representations/3.webp" class="img-type-one">
+                    <p class="par-type-nine">Learn</p>
+                    <p class="par-type-ten">Study the word of God in several forms</p>
+                    <p class="par-type-tan">and ways, we warmly welcome you</p>
+                    <p class="par-type-tan">into our midst. We trust God for</p>
+                    <p class="par-type-tan">a great spiritual enrichment for you today.</p>
+
+                </div>
+            </li>
+            <li>
+                <div class="div-type-six"> <img src="./Icons-representations/notice.png" class="img-type-one">
+                    <p class="par-type-nine">With Prayer</p>
+                    <p class="par-type-ten">Study the word of God in several forms</p>
+                    <p class="par-type-tan">and ways, we warmly welcome you</p>
+                    <p class="par-type-tan">into our midst. We trust God for</p>
+                    <p class="par-type-tan">a great spiritual enrichment for you today.</p>
+
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <div class="div-type-twelve">
+        <div class="div-type-fourteen">
+            <h1>2025 PROPHECY BY..</h1>
+            <h2>PASTOR ADEBOYE</h2>
+            <nav class="nav-bet-one">
+                <ul>
+
+                    <li>2025 will be a Landmark year.</li>
+                    <li>The day someone has been waiting for will arrive this year.</li>
+                    <li>The wind that started blowing last year, will continue to blow this year, but stronger.</li>
+                    <li>Some earth helpers will be replaced by heavenly ones this year.</li>
+                    <li>Mockers will be louder and more aggressive but unfortunately many of them will be not survive the year.</li>
+                    <li>Some towns and villages will shout "Victory At Last" this year.</li>
+                </ul>
+            </nav>
+
+            <button class="but-type-one">READ MORE</button>
+        </div>
+    </div>
+
+    <p class="txt-one"><span class="main-txt">September </span>My Month Of</p>
+    <p class="txt-two">Restoration.</p>
+    <p class="txt-three">But upon mount Zion shall be</p>
+    <p class="txt-four">deliverance, and there shall be</p>
+    <p class="txt-four">holiness; and the house</p>
+    <p class="txt-four">of jacob shall possess</p>
+    <p class="txt-four">their possessions</p>
+    <p class="txt-five">Obadiah 1:7</p>
+    <img src="./Pictures/mummy_adeboye.jpg" class="img-tst-one">
+
+
+    <div class="div-tst-one">
+        <img src="./Pictures/test_sample.jpg" class="img-ply-one">
+        <p class="plc-one">DIGGING DEEP</p>
+        <p class="plc-two">EVERY TUESDAY</p>
+        <p class="plc-three">6:30 PM - 8:00 PM</p>
+        <p class="plc-four">Join us for our Digging deep</p>
+        <p class="plc-five">program as we gather together</p>
+        <p class="plc-six">to glorify God through fellowship</p>
+        <p class="plc-seven">with one another to study the</p>
+        <p class="plc-eight">word of God.</p>
+        <p class="part-one">PASTOR JOSHUA</p>
+        <p class="part-two">and other anointed ministers of God</p>
+        <p class="part-three">Please, don't come alone. Invite others</p>
+        <p class="part-three">and God will bless you.</p>
+        <button class="btn-txt-one" onclick="LiveContainer()">VIEW LIVE</button>
+    </div>
+    <nav class="par-bar-one">
+        <ul>
+            <li>
+                <p class="par-btn-100">See more later</p>
+            </li>
+            <li><img src="./Icons-representations/right_arrow.png" class="img-tell-one"></li>
+        </ul>
+    </nav>
+
+    <p class="plc-tell-one">FAITH CLINIC</p>
+    <p class="plc-tell-two">EVERY THURSDAY</p>
+    <p class="plc-tell-three">6:30 PM - 7:30 PM</p>
+    <p class="plc-tell-four">Join us for our Faith Clinic</p>
+    <p class="plc-tell-five">program as we gather together</p>
+    <p class="plc-tell-five">to glorify God through fellowship</p>
+    <p class="plc-tell-five">with one another to study the</p>
+    <p class="plc-tell-five">word of God.</p>
+    <p class="plc-tell-six">PASTOR JOSHUA</p>
+    <p class="plc-tell-seven">and other anointed ministers of God</p>
+    <p class="plc-tell-seven">Please, don't come alone. Invite others</p>
+    <p class="plc-tell-seven">and God will bless you.</p>
+    <img src="./Pictures/sunday_school.jpg" class="tell-img-one">
+    <button class="btn-1" onclick="LiveContainer()">WATCH LIVE</button>
+
+    <div class="div-btn-one">
+        <p class="min-list">HELPFUL TOOLS</p>
+        <nav class="nav-btn-one">
+            <ul>
+                <li>
+                    <div class="div-min-one">
+                        <img src="./Icons-representations/icons8-person-100.png" class="pst-set" onclick="LiveMeet()">
+                        <div class="room-meet-1" style="display: none;">
+                            <p class="par-1-one">Request an audience with our</p>
+                            <p class="par-1-two">pastor by preparing an email.</p>
+                            <p class="par-1-three">First Name</p>
+                            <input class="ipt-1-one" type="text">
+                            <p class="par-1-four">Last Name</p>
+                            <input class="ipt-1-two" type="text">
+                            <p class="par-1-six">Email</p>
+                            <input class="ipt-1-three" type="email">
+                            <p class="par-1-seven">Message</p>
+                            <input class="ipt-1-four" type="email, text, number">
+                            <button class="but-play">SEND</button>
+                            <p class="par-1-8">View Profile</p>
+                        </div>
+                        <script>
+                            // for the live stream...
+                            function LiveMeet() {
+                                var container_ten = document.querySelector(".room-meet-1");
+                                container_ten.style.display = container_ten.style.display == "block" ? "none" : "block";
+                            }
+                        </script>
+                        <p class="one-1">MEET WITH PASTOR IN CHARGE</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="div-min-one-test">
+                        <img class="pst-set" src="./Icons-representations/icons8-cloud-100.png" onclick="LiveContainer()">
+                        <p class="one-1">ONLINE SERVICE</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="div-min-one-3">
+                        <img class="pst-set" src="./Icons-representations/icons8-visa-100.png" onclick="SetCont()">
+                        <div class="room-meet-2" style="display: none;">
+                            <div class="rom-met-1">
+                                <p class="rom-par-1">Credit Card Giving</p>
+                                <p class="rom-par-2">Online from our website</p>
+                                <p class="rom-par-3">If intersted in giving your offering through our online site</p>
+                                <p class="rom-par-4">we encourage you paying through this portal.</p>
+                                <button class="rom-but-1">Give Now</button>
+                            </div>
+                            <div class="rom-met-2"></div>
+                            <div class="rom-met-3">
+                                <p class="rom-par-5">Other Ways To Give</p>
+                                <p class="rom-par-6">Give In-Person</p>
+                                <p class="rom-par-7">Bring your offering to church on sunday</p>
+                                <p class="rom-par-8">for thankgiving.</p>
+                                <div class="rom-met-4">
+                                    <p class="rom-par-9">Mail-in</p>
+                                    <p class="rom-par-10">Kindly Email the offering to us if need be</p>
+                                </div>
+                            </div>
+                        </div>
+                        <script>
+                            // for the live stream...
+                            function SetCont() {
+                                var container_ten = document.querySelector(".room-meet-2");
+                                container_ten.style.display = container_ten.style.display == "block" ? "none" : "block";
+                            }
+                        </script>
+                        <p class="one-1">ONLINE GIVING</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="div-min-one-4">
+                        <img class="pst-set" src="./Icons-representations/icons8-support-100.png" onclick="ProjCont()">
+                        <div class="room-meet-3" style="display: none;">
+                            <div class="rom-met-1">
+                                <p class="rom-par-1">Credit Card Giving</p>
+                                <p class="rom-par-2">Online from our website</p>
+                                <p class="rom-par-3">If you're intersted in supporting church's projects through</p>
+                                <p class="rom-par-4">our online site we encourage you paying through here.</p>
+                                <button class="rom-but-1">Give Now</button>
+                            </div>
+                            <div class="rom-met-test"></div>
+                            <div class="rom-met-3">
+                                <p class="rom-par-5">Other Ways To Give</p>
+                                <p class="rom-par-6">Give In-Person</p>
+                                <p class="rom-par-7">Meet with any church officials to discuss this</p>
+                                <p class="rom-par-8">on sunday.</p>
+                                <div class="rom-met-4">
+                                    <p class="rom-par-9">Mail-in</p>
+                                    <p class="rom-par-10">Kindly Email the offering to us if need be.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <script>
+                            // for the live stream...
+                            function ProjCont() {
+                                var container_ten = document.querySelector(".room-meet-3");
+                                container_ten.style.display = container_ten.style.display == "block" ? "none" : "block";
+                            }
+                        </script>
+                        <p class="one-1">PROJECTS SUPPORT</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="div-min-one-5">
+                        <img class="pst-set" src="./Icons-representations/icons8-doctor-giving-advice-100.png" onclick="ConsultCont()">
+                        <div class="room-meet-4" style="display: none;">
+                            <p class="par-1-one">Request an audience with our</p>
+                            <p class="par-1-two">conselors by preparing an email.</p>
+                            <p class="par-1-three">First Name</p>
+                            <input class="ipt-1-one" type="text">
+                            <p class="par-1-four">Last Name</p>
+                            <input class="ipt-1-two" type="text">
+                            <p class="par-1-six">Email</p>
+                            <input class="ipt-1-three" type="email">
+                            <p class="par-1-seven">Message</p>
+                            <input class="ipt-1-four" type="email, text, number">
+                            <button class="but-play">SEND</button>
+                        </div>
+                        <script>
+                            // for the live stream...
+                            function ConsultCont() {
+                                var container_ten = document.querySelector(".room-meet-4");
+                                container_ten.style.display = container_ten.style.display == "block" ? "none" : "block";
+                            }
+                        </script>
+                        <p class="one-1">CONSULTATION</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="div-min-one-6">
+                        <img class="pst-set" src="./Icons-representations/icons8-platform-100.png" onclick="TellCont()">
+                        <div class="room-meet-5" style="display: none;">
+                            <div class="app-one">
+                                <p class="app-test-one">Via WhatsApp</p>
+                                <img src="./Icons-representations/icons8-whatsapp-100.png" class="app-img-one">
+                                <p class="app-par-one">Explore with us more</p>
+                                <p class="app-par-two">Via WhatsApp.</p>
+
+                            </div>
+                            <div class="app-two">
+                                <p class="app-test-one">Via Instagram</p>
+                                <img src="./Icons-representations/instag.webp" class="app-img-two">
+                                <p class="app-par-one">Explore with us more</p>
+                                <p class="app-par-two">Via Instagram.</p>
+                            </div>
+                            <div class="app-three">
+                                <p class="app-test-one">Via Facebook</p>
+                                <img src="./Icons-representations/facebook.png" class="app-img-three">
+                                <p class="app-par-one">Explore with us more</p>
+                                <p class="app-par-two">Via Facebook.</p>
+                            </div>
+                        </div>
+                        <script>
+                            // for the live stream...
+                            function TellCont() {
+                                var container_ten = document.querySelector(".room-meet-5");
+                                container_ten.style.display = container_ten.style.display == "block" ? "none" : "block";
+                            }
+                        </script>
+                        <p class="one-1">PLATFORMS/GROUPS</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="div-min-one-7">
+                        <img class="pst-set" src="./Icons-representations/icons8-magazine-100.png" onclick="BultCont()">
+                        <div class="room-meet-6" style="display: none;">
+                            <p class="bul-one">Not Yet Updated</p>
+                        </div>
+                        <script>
+                            // for the live stream...
+                            function BultCont() {
+                                var container_ten = document.querySelector(".room-meet-6");
+                                container_ten.style.display = container_ten.style.display == "block" ? "none" : "block";
+                            }
+                        </script>
+                        <p class="one-1">ONLINE BULLETIN</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="div-min-one-8">
+                        <img class="pst-set" src="./Icons-representations/icons8-photos-100.png" onclick="PhotosCont()">
+                        <div class="room-meet-7" style="display: none;">
+                            <p class="bul-one">Not Yet Updated</p>
+                        </div>
+                        <script>
+                            // for the live stream...
+                            function PhotosCont() {
+                                var container_ten = document.querySelector(".room-meet-7");
+                                container_ten.style.display = container_ten.style.display == "block" ? "none" : "block";
+                            }
+                        </script>
+                        <p class="one-1">EVENTS PHOTOS</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="div-min-one-9">
+                        <img src="./Icons-representations/icons8-love-100.png" class="pst-set" onclick="CareCont()">
+                        <div class="room-meet-8" style="display: none;">
+                            <p class="bul-one">Not Yet Updated</p>
+                        </div>
+                        <script>
+                            // for the live stream...
+                            function CareCont() {
+                                var container_ten = document.querySelector(".room-meet-8");
+                                container_ten.style.display = container_ten.style.display == "block" ? "none" : "block";
+                            }
+                        </script>
+                        <p class="one-1">ICARE</p>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+    </div>
+
+    <p class="min-list-one">Explore More Of Our Events</p>
+    <nav class="nav-btn-ten">
+        <ul>
+            <li>
+                <div class="div-min-ooo">
+                    <p class="bul-two">Not Yet Updated</p>
+                </div>
+            </li>
+            <li>
+                <div class="div-min-oo"></div>
+            </li>
+            <li>
+                <div class="div-min-oo"></div>
+            </li>
+            <li>
+                <div class="div-min-oo"></div>
+            </li>
+            <li>
+                <div class="div-min-oo"></div>
+            </li>
+        </ul>
+    </nav>
+    <p class="par-ui-one">More Events Photos</p>
+    <div class="div-in-one"><button class="btn-10" onclick="LiveContainer()">WATCH HERE</button></div>
+    <footer class="footer-container">
+        <img src="./Pictures/logo.png" class="fot-img-one">
+        <p class="par-fot-one">RCCG - Throne Of Mercy</p>
+
+
+        <nav class="nav-btt-one">
+            <ul>
+                <li onclick="window.location.href='For_Phone.html';">Home</li>
+                <li>About Us</li>
+                <li>Sunday School</li>
+
+            </ul>
+        </nav>
+        <nav class="nav-btt-two">
+            <ul>
+                <li>Help</li>
+                <li>Victories Women</li>
+                <li>Contact</li>
+                <li>Consultaion</li>
+            </ul>
+        </nav>
+        <p class="par-btt-ten">_____________________________________________________________________________</p>
+        <p class="par-btt-in"><img>Copyright 2025 - RCCG - Throne Of Mercy</p>
+    </footer>
+    <style>
+        /*please tomorrow ensure u change some of the font-sizes for the comuter set up too this pls  font-family: Arial, sans-serif;*/
+        
+        body {
+            background-color: #f6f1df;
+        }
+        
+        .display-pag {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.90);
+            z-index: 2;
+            top: 0;
+            left: 0;
+        }
+        
+        .display-page {
+            position: absolute;
+            font-size: 65px;
+            color: white;
+            top: 40%;
+            left: 50%;
+            font-weight: bold;
+            font-family: Impact, sans-serif;
+            transform: translate(-50%, -50%);
+        }
+        
+        .dis-one {
+            color: #242424;
+        }
+        
+        .dis-two {
+            color: #242424;
+        }
+        
+        .dis-three {
+            color: #242424;
+        }
+        
+        .pink {
+            color: #555555;
+        }
+        
+        .menu-bar {
+            width: 85%;
+            height: 700px;
+            background-color: black;
+            top: 0;
+            right: 0;
+            position: absolute;
+        }
+        
+        .menu-bar-img {
+            zoom: 0.35;
+            margin-top: 70px;
+            left: 15px;
+            position: absolute;
+            cursor: pointer;
+            /* Often added for clickable elements */
+        }
+        
+        .menu-bar-img-one {
+            zoom: 0.21;
+            margin-top: _px;
+            left: 40%;
+            position: absolute;
+        }
+        
+        .par-btn-100 {
+            font-size: 16px;
+            cursor: pointer;
+            /* Often added for buttons */
+            transition: background-color 0.3s, color 0.3s;
+            /* Smooth transition */
+        }
+        
+        .par-btn-100:hover {
+            background-color: #f6f1df;
+            /* Change background on hover */
+            color: black;
+            /* Change text color on hover */
+        }
+        
+        .menu-bar-img-two {
+            zoom: 0.55;
+            margin-top: _px;
+            left: 40%;
+            position: absolute;
+            margin-top: -40px;
+            margin-left: -200px;
+            font-style: italic;
+        }
+        
+        .menu-bar-nav {
+            margin-top: 30px;
+            margin-left: -30px;
+            text-align: center;
+        }
+        
+        .menu-bar-nav li {
+            list-style: none;
+            margin-top: 10px;
+            display: flex;
+        }
+        
+        .menu-bar-img-three {
+            zoom: 0.55;
+            margin-top: _px;
+            left: 40%;
+            position: absolute;
+            margin-top: -40px;
+            margin-left: 220px;
+            font-style: italic;
+        }
+        
+        .one-1 {
+            text-align: center;
+            color: white;
+        }
+        
+        .menu-bar-img-four {
+            zoom: 0.55;
+            margin-top: _px;
+            left: 40%;
+            position: absolute;
+            margin-top: -10px;
+            margin-left: -170px;
+            font-style: italic;
+        }
+        
+        .menu-div-one {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            top: 0;
+            position: fixed;
+            left: 0;
+            z-index: 2;
+        }
+        
+        .live-div-one {
+            width: 290px;
+            top: 50%;
+            left: 50%;
+            height: 430px;
+            background-color: white;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            border-radius: 10px;
+        }
+        
+        .live-div-two {
+            width: 270px;
+            top: 62%;
+            left: 50%;
+            height: 310px;
+            background-color: #dbd7d7;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            border-radius: 10px;
+        }
+        
+        .live-par-one {
+            text-align: center;
+            margin-top: -25px;
+            font-size: 15px;
+            font-family: "Cabri", sans-serif;
+        }
+        
+        .live-par-two {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 14px;
+            font-weight: bold;
+            font-family: "Cabri", sans-serif;
+        }
+        
+        .live-par-three {
+            text-align: center;
+            margin-top: -10px;
+            font-size: 14px;
+            font-weight: bold;
+            font-family: "Cabri", sans-serif;
+        }
+        
+        .live-par-four {
+            text-align: center;
+            font-size: 14px;
+            margin-top: 50%;
+            font-weight: bold;
+            font-family: "Cabri", sans-serif;
+        }
+        
+        .live-img-one {
+            margin-top: 30px;
+            margin-left: 30px;
+            zoom: 0.4;
+        }
+        
+        .live-list-one {
+            position: absolute;
+            margin-top: -13px;
+        }
+        
+        .live-nav-one {
+            margin-top: -10px;
+            font-size: 13px;
+            margin-left: -30px;
+            font-family: "Cabri", sans-serif;
+        }
+        
+        .live-nav-one li {
+            list-style: none;
+            display: inline-block;
+        }
+        
+        .menu-bar-img-five {
+            zoom: 0.35;
+            margin-top: _px;
+            left: 40%;
+            position: absolute;
+            margin-top: -30px;
+            margin-left: 350px;
+            font-style: italic;
+        }
+        
+        .menu-bar-img-test {
+            zoom: 0.4;
+            margin-top: _px;
+            left: 40%;
+            position: absolute;
+            margin-top: -10px;
+            margin-left: -130px;
+            font-style: italic;
+        }
+        
+        .menu-but-one {
+            width: 100%;
+            height: 60px;
+            margin-top: 120px;
+            background-color: black;
+            color: white;
+            border: 0px;
+            font-size: 18px;
+            padding-right: -10px;
+            font-style: italic;
+            font-family: Impact, sans-serif;
+            cursor: pointer;
+            /* Often added for buttons */
+            transition: background-color 0.3s, color 0.3s;
+            /* Smooth transition */
+        }
+        
+        .menu-but-one:hover {
+            background-color: #1e1e1e;
+            /* Change background on hover */
+            color: white;
+            /* Change text color on hover */
+        }
+        
+        .menu-but-two {
+            width: 100%;
+            height: 60px;
+            margin-top: 0px;
+            background-color: black;
+            color: white;
+            border: 0px;
+            font-size: 18px;
+            padding-right: -10px;
+            font-style: italic;
+            font-family: Impact, sans-serif;
+            cursor: pointer;
+            /* Often added for buttons */
+            transition: background-color 0.3s, color 0.3s;
+            /* Smooth transition */
+        }
+        
+        .menu-but-two:hover {
+            background-color: #1e1e1e;
+            /* Change background on hover */
+            color: white;
+            /* Change text color on hover */
+        }
+        
+        .menu-but-three {
+            width: 100%;
+            height: 60px;
+            margin-top: 0px;
+            background-color: black;
+            color: white;
+            border: 0px;
+            font-size: 18px;
+            padding-right: -10px;
+            font-style: italic;
+            font-family: Impact, sans-serif;
+            cursor: pointer;
+            /* Often added for buttons */
+            transition: background-color 0.3s, color 0.3s;
+            /* Smooth transition */
+        }
+        
+        .menu-but-three:hover {
+            background-color: #1e1e1e;
+            /* Change background on hover */
+            color: white;
+            /* Change text color on hover */
+        }
+        
+        .menu-but-four {
+            width: 100%;
+            height: 60px;
+            margin-top: 0px;
+            background-color: black;
+            color: white;
+            border: 0px;
+            font-size: 18px;
+            padding-right: -10px;
+            font-style: italic;
+            font-family: Impact, sans-serif;
+            cursor: pointer;
+            /* Often added for buttons */
+            transition: background-color 0.3s, color 0.3s;
+            /* Smooth transition */
+        }
+        
+        .menu-but-four:hover {
+            background-color: #1e1e1e;
+            /* Change background on hover */
+            color: white;
+            /* Change text color on hover */
+        }
+        
+        .bnt-one {
+            width: 160px;
+            height: 40px;
+            background-color: black;
+            border: 2px solid black;
+            font-weight: _;
+            font-family: Impact, sans-serif;
+            font-size: 14.5px;
+            color: white;
+            cursor: pointer;
+            /* Often added for buttons */
+            transition: background-color 0.3s, color 0.3s;
+            /* Smooth transition */
+        }
+        
+        .reg-div {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: black;
+            z-index: 3;
+        }
+        
+        .sub-reg-div-one {
+            width: 100%;
+            height: 270px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-image: url('./Pictures/test_front.jpg');
+            background-size: cover;
+        }
+        
+        .sub-reg-div-two {
+            width: 100%;
+            height: 270px;
+            background-color: rgba(0, 0, 0, 0.65);
+            top: 0;
+            position: fixed;
+            left: 0;
+            z-index: 2;
+        }
+        
+        .reg-par-one {
+            font-size: 30px;
+            text-align: center;
+            color: white;
+            font-family: Impact, sans-serif;
+            margin-top: 100px;
+        }
+        
+        .reg-par-two {
+            font-size: 19px;
+            text-align: center;
+            color: white;
+            font-family: Impact, sans-serif;
+            margin-top: 220px;
+        }
+        
+        .reg-par-three {
+            font-size: 19px;
+            text-align: center;
+            color: white;
+            font-family: Impact, sans-serif;
+            margin-top: -8px;
+        }
+        
+        .but-reg-three {
+            width: 160px;
+            height: 45px;
+            font-size: 15px;
+            font-weight: bold;
+            color: black;
+            background-color: white;
+            margin-top: 65px;
+            border: 0px;
+            font-family: "Cabri", sans-serif;
+            border-radius: 20px;
+            transform: translate(-60%, -50%);
+        }
+        
+        .but-reg-one {
+            width: 270px;
+            position: absolute;
+            height: 50px;
+            font-weight: bold;
+            left: 0;
+            background-color: white;
+            margin-top: 10px;
+            font-size: 14px;
+            border: 0px solid white;
+            font-family: "Cabri", sans-serif;
+            border-bottom-right-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+        
+        .but-reg-two {
+            width: 270px;
+            position: absolute;
+            height: 50px;
+            font-weight: bold;
+            left: 0;
+            font-size: 14px;
+            background-color: white;
+            margin-top: 80px;
+            font-family: "Cabri", sans-serif;
+            border: 0px solid white;
+            border-bottom-right-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+        
+        .sp-reg-one {
+            vertical-align: middle;
+            /* Try this for baseline adjustment */
+            position: relative;
+            top: 15px;
+            left: -26px;
+            /* Adjust this value to move text up/down */
+        }
+        
+        .sp-reg-two {
+            vertical-align: middle;
+            /* Try this for baseline adjustment */
+            position: relative;
+            top: 15px;
+            left: 10px;
+            /* Adjust this value to move text up/down */
+        }
+        
+        .reg-ui-one {
+            zoom: 0.35;
+            margin-left: 600px;
+            margin-top: -50px;
+        }
+        
+        .sp-reg-two {
+            margin-left: -80px;
+        }
+        
+        .reg-div-one {
+            zoom: 0.39;
+            position: absolute;
+            margin-left: 20px;
+            margin-top: 50px;
+            left: 0;
+        }
+        
+        .admin-div {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: white;
+            z-index: 3;
+        }
+        
+        .admin-img-one {
+            margin-top: 250px;
+            margin-left: 150px;
+            zoom: 0.14;
+            left: 0;
+            position: absolute;
+        }
+        
+        .admin-par-one {
+            font-size: 36px;
+            font-weight: bold;
+            margin-left: 20px;
+            margin-top: 190px;
+            font-family: "Cabri", sans-serif;
+            text-align: start;
+            color: black;
+        }
+        
+        .admin-par-two {
+            font-size: 14px;
+            font-family: "Cabri", sans-serif;
+            margin-left: 20px;
+            margin-top: -35px;
+            text-align: start;
+            font-style: italic;
+        }
+        
+        .admin-but-one {
+            width: 300px;
+            height: 75px;
+            left: 0;
+            margin-left: 20px;
+            position: absolute;
+            background-color: #e1e1e1;
+            border: 1px solid #e1e1e1;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        
+        .admin-but-two {
+            margin-top: 105px;
+            margin-left: 20px;
+            width: 300px;
+            height: 70px;
+            left: 0;
+            position: absolute;
+            background-color: #e1e1e1;
+            border: 1px solid #e1e1e1;
+            border-radius: 5px;
+        }
+        
+        .admin-but-three {
+            margin-top: 195px;
+            margin-left: 20px;
+            width: 300px;
+            height: 60px;
+            font-size: 14.5px;
+            font-family: "Cabri", sans-serif;
+            left: 0;
+            position: absolute;
+            background-color: black;
+            color: white;
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+        
+        .admin-ipt-one {
+            width: 225px;
+            height: 30px;
+            margin-left: -130px;
+            position: absolute;
+            background-color: transparent;
+            border: 1px solid transparent;
+            padding-left: 10px;
+            border-bottom: 0px solid #ff6800;
+        }
+        
+        .admin-pass {
+            margin-left: 30px;
+            font-size: 15px;
+            color: #ff6800;
+            position: absolute;
+            margin-top: 260px;
+        }
+        
+        .sp-admin-1 {
+            vertical-align: middle;
+            /* Try this for baseline adjustment */
+            position: relative;
+            left: -90px;
+            top: -20px;
+            color: #ff6800;
+            /* Adjust this value to move text up/down */
+        }
+        
+        .sp-admin-2 {
+            vertical-align: middle;
+            /* Try this for baseline adjustment */
+            position: relative;
+            left: -100px;
+            top: -_px;
+            /* Adjust this value to move text up/down */
+        }
+        
+        .admin-img-two {
+            margin-top: 15px;
+            zoom: 0.4;
+            left: 0;
+            margin-left: 20px;
+            position: absolute;
+        }
+        
+        .sch-div {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: white;
+            z-index: 3;
+        }
+        
+        .sub-sch-div {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: transparent;
+            z-index: 3;
+        }
+        
+        .sch-nav-1 {
+            position: fixed;
+            font-size: 75px;
+            top: 65%;
+            left: 10%;
+            text-align: center;
+        }
+        
+        .sch-nav-1 li {
+            list-style: none;
+            color: black;
+            padding-left: -50px;
+            display: inline-block;
+        }
+        
+        .sch-img-1 {
+            zoom: 0.65;
+            position: absolute;
+            left: 0;
+            top: 133px;
+        }
+        
+        .sch-but-1 {
+            width: 270px;
+            height: 40px;
+            color: white;
+            background-color: black;
+            border: 0px;
+            border-radius: 10px;
+            font-size: 15.5px;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            font-family: "Cabri", sans-serif;
+            top: 90%;
+            position: absolute;
+            cursor: pointer;
+            /* Often added for buttons */
+            transition: background-color 0.3s, color 0.3s;
+            /* Smooth transition */
+        }
+        
+        .sch-but-1:hover {
+            background-color: #0c0c0c;
+            /* Change background on hover */
+            color: white;
+            /* Change text color on hover */
+        }
+        
+        .bnt-one:hover {
+            background-color: #1e1e1e;
+            border: 2px solid #1e1e1e;
+            /* Change background on hover */
+            color: white;
+            /* Change text color on hover */
+        }
+        
+        .bnt-two {
+            width: 200px;
+            height: 40px;
+            background-color: white;
+            border: 2px solid white;
+            font-weight: bold;
+            font-size: 14.5px;
+            padding-left: 40px;
+            border-radius: 20px;
+        }
+        
+        .daddy-pic-one {
+            margin-top: 1850px;
+            margin-left: 25px;
+            zoom: 0.25;
+            border-radius: 30px;
+        }
+        
+        .div-type-one {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            background-color: transparent;
+            margin-top: 25px;
+            margin-left: 85px;
+        }
+        
+        .div-test-one {
+            width: 320px;
+            height: 810px;
+            background-color: black;
+            margin-top: 455px;
+            position: relative;
+            border-radius: 20px;
+        }
+        
+        .div-btn-one {
+            width: 100%;
+            margin-top: 90px;
+            height: 2200px;
+            left: 0;
+            position: absolute;
+            background-color: black;
+        }
+        
+        .nav-btn-ten {
+            margin-top: _px;
+        }
+        
+        .nav-btn-ten li {
+            list-style: none;
+            display: inline-block;
+        }
+        
+        .div-in-one {
+            width: 100%;
+            height: 330px;
+            position: absolute;
+            margin-top: 90px;
+            left: 0;
+            background-image: url('./Pictures/1b-1024x576.jpg');
+            background-size: cover;
+        }
+        
+        .par-ui-one {
+            text-align: center;
+            margin-top: 70px;
+            font-size: 15px;
+            color: blue;
+        }
+        
+        .par-ui-one:hover {
+            text-align: center;
+            margin-top: 70px;
+            font-size: 15px;
+            color: black;
+        }
+        
+        .par-btt-ten {
+            margin-top: 35px;
+            color: #414141;
+            font-size: 8px;
+            text-align: center;
+        }
+        
+        .btn-10 {
+            width: 120px;
+            height: 50px;
+            background-color: black;
+            color: white;
+            margin-top: 269px;
+            border: 2px solid black;
+            left: 63%;
+            transform: translateX(90%);
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 12px;
+            font-family: "Cabri", sans-serif;
+            cursor: pointer;
+            /* Often added for buttons */
+            transition: background-color 0.3s, color 0.3s;
+            /* Smooth transition */
+        }
+        
+        .btn-10:hover {
+            background-color: #1b1b1b;
+            border: 2px solid #1b1b1b;
+            /* Change background on hover */
+            color: white;
+            /* Change text color on hover */
+        }
+        
+        .fot-img-one {
+            zoom: 0.25;
+            left: 63%;
+            transform: translateX(78%);
+        }
+        
+        .par-btt-in {
+            color: #8d8d8d;
+            font-size: 15px;
+            font-family: Impact, sans-serif;
+            text-align: center;
+        }
+        
+        .par-fot-one {
+            color: #000a98;
+            font-weight: bold;
+            text-align: center;
+            font-size: 18px;
+            font-family: "Cabri", sans-serif;
+            margin-left: 20px;
+            margin-top: -0px;
+        }
+        
+        .nav-btt-one {
+            color: #8d8d8d;
+            font-size: 13px;
+            text-align: center;
+            font-weight: bold;
+            margin-top: -_px;
+        }
+        
+        .nav-btt-two {
+            color: #8d8d8d;
+            font-weight: bold;
+            font-size: 13px;
+            text-align: center;
+            margin-top: -15px;
+        }
+        
+        .nav-btt-one li {
+            list-style: none;
+            padding: 10px;
+            display: inline-block;
+        }
+        
+        .nav-btt-two li {
+            padding: 10px;
+            list-style: none;
+            display: inline-block;
+        }
+        
+        .min-list {
+            margin-top: 50px;
+            font-size: 35px;
+            color: white;
+            font-family: Impact, sans-serif;
+            text-align: center;
+        }
+        
+        .min-list-one {
+            margin-top: 2390px;
+            font-size: 35px;
+            color: black;
+            font-family: Impact, sans-serif;
+            text-align: center;
+        }
+        
+        .div-min-one {
+            width: 100%;
+            left: 0;
+            height: 230px;
+            position: absolute;
+            background-color: transparent;
+            border-bottom: 1px solid white;
+        }
+        
+        .div-min-one-test {
+            width: 100%;
+            top: 357px;
+            left: 0;
+            height: 230px;
+            position: absolute;
+            background-color: transparent;
+            border-bottom: 1px solid white;
+        }
+        
+        .div-min-one-3 {
+            width: 100%;
+            top: 588px;
+            left: 0;
+            height: 230px;
+            position: absolute;
+            background-color: transparent;
+            border-bottom: 1px solid white;
+        }
+        
+        .pst-set {
+            margin-top: 58px;
+            /* Moves element down */
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .room-meet-1 {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: black;
+            z-index: 3;
+        }
+        
+        .par-1-one {
+            color: white;
+            font-size: 25px;
+            font-family: Impact, sans-serif;
+            text-align: center;
+            margin-top: 18px;
+        }
+        
+        .par-1-two {
+            color: white;
+            text-align: center;
+            font-size: 25px;
+            margin-top: -18px;
+            font-family: Impact, sans-serif;
+        }
+        
+        .par-1-three {
+            color: white;
+            font-size: 15px;
+            margin-left: 18px;
+            margin-top: 35px;
+            font-family: "Cabri", sans-serif;
+        }
+        
+        .par-1-four {
+            color: white;
+            font-size: 15px;
+            margin-left: 18px;
+            margin-top: _px;
+            font-family: "Cabri", sans-serif;
+        }
+        
+        .par-1-five {
+            color: white;
+            font-size: 15px;
+            margin-left: 18px;
+            margin-top: _px;
+            font-family: "Cabri", sans-serif;
+        }
+        
+        .par-1-six {
+            color: white;
+            font-size: 15px;
+            margin-left: 18px;
+            margin-top: _px;
+            font-family: "Cabri", sans-serif;
+        }
+        
+        .par-1-seven {
+            color: white;
+            font-size: 15px;
+            margin-left: 18px;
+            margin-top: _px;
+            font-family: "Cabri", sans-serif;
+        }
+        
+        .par-1-8 {
+            color: white;
+            font-size: 15px;
+            margin-left: 18px;
+            margin-top: _px;
+            text-align: center;
+            font-family: "Cabri", sans-serif;
+        }
+        
+        .ipt-1-one {
+            width: 290px;
+            height: 36px;
+            margin-left: 18px;
+            margin-top: -9px;
+            border-radius: 10px;
+            background-color: #e1e1e1;
+            border: 1px solid #e1e1e1;
+        }
+        
+        .ipt-1-two {
+            width: 290px;
+            height: 36px;
+            margin-left: 18px;
+            margin-top: -9px;
+            border-radius: 10px;
+            background-color: #e1e1e1;
+            border: 1px solid #e1e1e1;
+        }
+        
+        .ipt-1-three {
+            width: 290px;
+            height: 36px;
+            margin-left: 18px;
+            margin-top: -9px;
+            border-radius: 10px;
+            background-color: #e1e1e1;
+            border: 1px solid #e1e1e1;
+        }
+        
+        .ipt-1-four {
+            width: 290px;
+            height: 106px;
+            margin-left: 18px;
+            margin-top: -9px;
+            border-radius: 10px;
+            background-color: #e1e1e1;
+            border: 1px solid #e1e1e1;
+        }
+        
+        .but-play {
+            width: 290px;
+            height: 50px;
+            border-radius: 10px;
+            margin-left: 18px;
+            color: white;
+            margin-top: 20px;
+            font-size: 15px;
+            background-color: black;
+            border: 1px solid white;
+        }
+        
+        .room-meet-2 {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: black;
+            z-index: 3;
+        }
+        
+        .rom-met-1 {
+            width: 100%;
+            height: 160px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: black;
+            z-index: 2;
+        }
+        
+        .rom-par-1 {
+            font-size: 32px;
+            font-weight: bold;
+            margin-left: 18px;
+            color: white;
+            font-family: "Cabri", sans-serif;
+        }
+        
+        .rom-par-2 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-left: 18px;
+            margin-top: -21px;
+            color: white;
+            font-family: "Cabri", sans-serif;
+        }
+        
+        .rom-par-3 {
+            font-size: 11.5px;
+            margin-left: 18px;
+            color: white;
+            margin-top: -6px;
+            font-family: "Cabri", sans-serif;
+        }
+        
+        .rom-par-4 {
+            font-size: 11.5px;
+            margin-left: 18px;
+            color: white;
+            margin-top: -3px;
+            font-family: "Cabri", sans-serif;
+        }
+        
+        .rom-but-1 {
+            width: 90px;
+            height: 35px;
+            color: black;
+            background-color: white;
+            margin-top: 20px;
+            border: 1px solid white;
+            font-family: "Cabri", sans-serif;
+            border-radius: 5px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+        }
+        
+        .rom-but-1:hover {
+            background-color: #0c0c0c;
+            /* Change background on hover */
+            color: white;
+            /* Change text color on hover */
+        }
+        
+        .rom-met-2 {
+            width: 100%;
+            height: 220px;
+            position: fixed;
+            top: 210px;
+            left: 0;
+            background-image: url('./Pictures/1a-1024x576.jpg');
+            background-size: cover;
+            z-index: 2;
+        }
+        
+        .rom-met-3 {
+            width: 100%;
+            height: 180px;
+            position: fixed;
+            top: 430px;
+            left: 0;
+            background-color: black;
+            z-index: 2;
+        }
+        
+        .rom-met-4 {
+            width: 100%;
+            height: 80px;
+            position: fixed;
+            top: 520px;
+            left: 0;
+            background-color: black;
+            z-index: 2;
+        }
+        
+        .rom-met-4:hover {
+            background-color: #0c0c0c;
+            /* Change background on hover */
+            color: white;
+            /* Change text color on hover */
+        }
+        
+        .room-meet-3 {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: black;
+            z-index: 3;
+        }
+        
+        .rom-met-test {
+            width: 100%;
+            height: 220px;
+            position: fixed;
+            top: 210px;
+            left: 0;
+            background-image: url('./Pictures/sunday_service.jpg');
+            background-size: cover;
+            z-index: 2;
+        }
+        
+        .room-meet-4 {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: black;
+            z-index: 3;
+        }
+        
+        .rom-par-5 {
+            font-size: 20px;
+            text-align: center;
+            font-weight: bold;
+            color: white;
+            margin-top: 0px;
+            font-family: "Cabri", sans-serif;
+        }
+        
+        .rom-par-6 {
+            font-size: 16px;
+            margin-left: 18px;
+            font-weight: bold;
+            color: white;
+            margin-top: -9px;
+            font-family: "Cabri", sans-serif;
+        }
+        
+        .rom-par-7 {
+            font-size: 11.5px;
+            margin-left: 18px;
+            color: white;
+            margin-top: -9px;
+            font-family: "Cabri", sans-serif;
+        }
+        
+        .rom-par-8 {
+            font-size: 11.5px;
+            margin-left: 18px;
+            color: white;
+            margin-top: -5px;
+            font-family: "Cabri", sans-serif;
+        }
+        
+        .rom-par-9 {
+            font-size: 16px;
+            margin-left: 18px;
+            font-weight: bold;
+            color: white;
+            margin-top: -px;
+            font-family: "Cabri", sans-serif;
+        }
+        
+        .rom-par-10 {
+            font-size: 11.5px;
+            margin-left: 18px;
+            color: white;
+            margin-top: -9px;
+            font-family: "Cabri", sans-serif;
+        }
+        
+        .room-meet-5 {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: black;
+            z-index: 3;
+        }
+        
+        .app-one {
+            width: 100%;
+            height: 200px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: black;
+        }
+        
+        .app-one:hover {
+            background-color: #0c0c0c;
+            /* Change background on hover */
+            color: white;
+            /* Change text color on hover */
+        }
+        
+        .app-test-one {
+            font-size: 25px;
+            font-family: Impact, sans-serif;
+            margin-left: 19px;
+            color: white;
+        }
+        
+        .app-img-one {
+            zoom: 0.7;
+            margin-left: 19px;
+            margin-top: -19px;
+        }
+        
+        .app-img-two {
+            zoom: 0.9;
+            margin-top: -10px;
+            margin-left: 19px;
+        }
+        
+        .app-img-three {
+            zoom: 0.5;
+            margin-top: -19px;
+            margin-left: 19px;
+        }
+        
+        .app-two {
+            width: 100%;
+            height: 200px;
+            position: absolute;
+            top: 200px;
+            left: 0;
+            background-color: black;
+        }
+        
+        .app-two:hover {
+            background-color: #0c0c0c;
+            /* Change background on hover */
+            color: white;
+            /* Change text color on hover */
+        }
+        
+        .app-three {
+            width: 100%;
+            height: 200px;
+            position: absolute;
+            top: 400px;
+            left: 0;
+            background-color: black;
+        }
+        
+        .app-three:hover {
+            background-color: #0c0c0c;
+            /* Change background on hover */
+            color: white;
+            /* Change text color on hover */
+        }
+        
+        .app-par-one {
+            color: white;
+            margin-top: -61px;
+            margin-left: 89px;
+            font-family: "Cabri", sans-serif;
+            font-size: 19px;
+        }
+        
+        .app-par-two {
+            color: white;
+            font-size: 18px;
+            font-family: "Cabri", sans-serif;
+            margin-top: -10px;
+            margin-left: 89px;
+        }
+        
+        .room-meet-6 {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: black;
+            z-index: 3;
+        }
+        
+        .bul-one {
+            font-size: 20px;
+            text-align: center;
+            top: 50%;
+            color: white;
+            font-family: "Cabri", sans-serif;
+            position: relative;
+        }
+        
+        .bul-two {
+            font-size: 20px;
+            text-align: center;
+            top: 50%;
+            color: black;
+            font-family: "Cabri", sans-serif;
+            position: relative;
+        }
+        
+        .room-meet-7 {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: black;
+            z-index: 3;
+        }
+        
+        .pht-div-one {
+            width: 100%;
+            height: 190px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-image: url('./Pictures/Events_Photos/IMG_4473.jpeg');
+            background-size: cover;
+            z-index: 2;
+        }
+        
+        .room-meet-8 {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: black;
+            z-index: 3;
+        }
+        
+        .div-min-one-4 {
+            width: 100%;
+            top: 819px;
+            left: 0;
+            height: 230px;
+            position: absolute;
+            background-color: transparent;
+            border-bottom: 1px solid white;
+        }
+        
+        .div-min-one-5 {
+            width: 100%;
+            top: 1050px;
+            left: 0;
+            height: 230px;
+            position: absolute;
+            background-color: transparent;
+            border-bottom: 1px solid white;
+        }
+        
+        .div-min-one-6 {
+            width: 100%;
+            top: 1281px;
+            left: 0;
+            height: 230px;
+            position: absolute;
+            background-color: transparent;
+            border-bottom: 1px solid white;
+        }
+        
+        .div-min-one-7 {
+            width: 100%;
+            top: 1512px;
+            left: 0;
+            height: 230px;
+            position: absolute;
+            background-color: transparent;
+            border-bottom: 1px solid white;
+        }
+        
+        .div-min-one-8 {
+            width: 100%;
+            top: 1743px;
+            left: 0;
+            height: 230px;
+            position: absolute;
+            background-color: transparent;
+            border-bottom: 1px solid white;
+        }
+        
+        .div-min-one-9 {
+            width: 100%;
+            top: 1974px;
+            left: 0;
+            height: 230px;
+            position: absolute;
+            background-color: transparent;
+            border-bottom: 1px solid white;
+        }
+        
+        .div-min-ooo {
+            width: 250px;
+            height: 350px;
+            background-color: transparent;
+            color: white;
+        }
+        
+        .nav-btn-one {}
+        
+        .nav-btn-one li {
+            list-style: none;
+            display: inline-block;
+        }
+        
+        .div-type-twelve {
+            width: 100%;
+            height: 520px;
+            background-image: url('./Pictures/play_them.jpg');
+            background-size: cover;
+            left: 0;
+            margin: 0;
+            position: absolute;
+        }
+        
+        .div-type-fourteen {
+            /* For the header page to be recognized */
+            background-color: rgba(0, 0, 0, 0.65);
+            position: absolute;
+            margin: 0;
+            left: 0;
+            width: 100%;
+            height: 520px;
+        }
+        
+        .div-tst-one {
+            width: 100%;
+            height: 770px;
+            background-color: #433227;
+            position: absolute;
+            margin-top: 125px;
+            left: 0;
+        }
+        
+        .img-ply-one {
+            zoom: 0.72;
+            margin-top: 45px;
+            margin-left: 15px;
+            border-radius: 20px;
+        }
+        
+        .plc-one {
+            margin-top: -_px;
+            color: white;
+            margin-right: _px;
+            font-size: 25px;
+            text-align: center;
+            font-family: "Cabri", sans-serif;
+            font-weight: bold;
+        }
+        
+        .plc-two {
+            text-align: center;
+            color: white;
+            margin-top: -20px;
+            margin-right: _px;
+            font-family: "Cabri", sans-serif;
+            font-size: 20px;
+        }
+        
+        .plc-three {
+            text-align: center;
+            color: white;
+            margin-top: -9px;
+            margin-right: _px;
+            font-family: "Cabri", sans-serif;
+            font-size: 18px;
+        }
+        
+        .plc-four {
+            text-align: center;
+            color: white;
+            font-size: 15px;
+            margin-top: -5px;
+            font-style: italic;
+            margin-right: _px;
+            font-family: "Cabri", sans-serif;
+        }
+        
+        .plc-five {
+            text-align: center;
+            color: white;
+            margin-right: _px;
+            font-size: 15px;
+            font-family: "Cabri", sans-serif;
+            font-style: italic;
+            margin-top: -12px;
+        }
+        
+        .plc-six {
+            text-align: center;
+            color: white;
+            margin-top: -12px;
+            margin-right: _px;
+            font-family: "Cabri", sans-serif;
+            font-size: 15px;
+            font-style: italic;
+        }
+        
+        .btn-1 {
+            width: 120px;
+            margin-top: 40px;
+            height: 45px;
+            background-color: black;
+            color: white;
+            font-weight: bold;
+            left: 50%;
+            border: 2px solid black;
+            transform: translateX(76%);
+            cursor: pointer;
+            /* Often added for buttons */
+            transition: background-color 0.3s, color 0.3s;
+            /* Smooth transition */
+        }
+        
+        .btn-1:hover {
+            background-color: #1b1b1b;
+            border: 2px solid #1b1b1b;
+            /* Change background on hover */
+            color: white;
+            /* Change text color on hover */
+        }
+        
+        .plc-seven {
+            text-align: center;
+            color: white;
+            margin-top: -12px;
+            margin-right: _px;
+            font-family: "Cabri", sans-serif;
+            font-size: 15px;
+            font-style: italic;
+        }
+        
+        .plc-eight {
+            text-align: center;
+            color: white;
+            font-size: 15px;
+            margin-top: -12px;
+            font-style: italic;
+            margin-right: _px;
+            font-family: "Cabri", sans-serif;
+        }
+        
+        .part-two {
+            text-align: center;
+            color: white;
+            font-family: "Cabri", sans-serif;
+            margin-top: -10px;
+            font-size: 15px;
+            margin-right: _px;
+        }
+        
+        .part-one {
+            text-align: center;
+            color: #202dec;
+            font-size: 20px;
+            font-weight: bold;
+            font-family: "Cabri", sans-serif;
+            margin-top: 20px;
+            font-style: italic;
+            margin-right: _px;
+        }
+        
+        .part-three {
+            text-align: center;
+            color: white;
+            font-size: 15px;
+            font-family: "Cabri", sans-serif;
+            margin-top: -10px;
+            margin-right: _px;
+        }
+        
+        .btn-txt-one {
+            width: 130px;
+            height: 50px;
+            background-color: black;
+            font-family: "Cabri", sans-serif;
+            font-weight: bolder;
+            font-size: 13.5px;
+            margin-top: 22px;
+            left: 65%;
+            transform: translateX(80%);
+            border: 2px solid black;
+            color: white;
+            border-radius: 20px;
+            cursor: pointer;
+            /* Often added for buttons */
+            transition: background-color 0.3s, color 0.3s;
+            /* Smooth transition */
+        }
+        
+        .btn-txt-one:hover {
+            background-color: #1b1b1b;
+            border: 2px solid #1b1b1b;
+            /* Change background on hover */
+            color: white;
+            /* Change text color on hover */
+        }
+        
+        .par-bar-one {
+            text-align: center;
+            margin-top: 970px;
+            margin-left: -25px;
+            font-size: 14px;
+        }
+        
+        .par-bar-one li {
+            list-style: none;
+            display: inline-block;
+            padding: 5px;
+            color: #202dec;
+        }
+        
+        .plc-tell-one {
+            color: black;
+            margin-top: 30px;
+            text-align: center;
+            font-size: 35px;
+            font-family: Impact, sans-serif;
+        }
+        
+        .plc-tell-two {
+            margin-top: -32px;
+            text-align: center;
+            margin-left: _px;
+            font-family: Impact, sans-serif;
+            font-size: 21px;
+        }
+        
+        .plc-tell-three {
+            margin-top: -21px;
+            text-align: center;
+            margin-left: _px;
+            font-size: 17px;
+            font-family: Impact, sans-serif;
+        }
+        
+        .plc-tell-four {
+            margin-top: 5px;
+            font-style: italic;
+            margin-left: _px;
+            font-size: 16px;
+            font-family: "Cabri", sans-serif;
+            text-align: center;
+        }
+        
+        .plc-tell-five {
+            margin-top: -11px;
+            font-family: "Cabri", sans-serif;
+            font-style: italic;
+            margin-left: _px;
+            text-align: center;
+            font-size: 16px;
+        }
+        
+        .plc-tell-six {
+            margin-left: _px;
+            font-size: 19px;
+            text-align: center;
+            font-family: "Cabri", sans-serif;
+            font-weight: bold;
+        }
+        
+        .plc-tell-seven {
+            margin-top: -11px;
+            text-align: center;
+            font-style: italic;
+            font-family: "Cabri", sans-serif;
+            margin-left: _px;
+            font-size: 16px;
+        }
+        
+        .tell-img-one {
+            zoom: 0.26;
+            margin-top: _px;
+            border-radius: 30px;
+        }
+        
+        .img-tell-one {
+            zoom: 0.2;
+        }
+        
+        .but-type-one {
+            width: 150px;
+            height: 45px;
+            background-color: #0b138d;
+            color: white;
+            border: 2px solid #0b138d;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-top: 12px;
+            font-weight: bold;
+            left: 50%;
+            transform: translateX(60%);
+            cursor: pointer;
+            /* Often added for buttons */
+            transition: background-color 0.3s, color 0.3s;
+            /* Smooth transition */
+        }
+        
+        .but-type-one:hover {
+            background-color: #181819;
+            border: 2px solid #181819;
+            /* Change background on hover */
+            color: white;
+            /* Change text color on hover */
+        }
+        
+        .nav-bet-one {
+            margin-top: -8px;
+            margin-left: -13px;
+        }
+        
+        .nav-bet-one li {
+            font-size: 16.5px;
+            padding: 8px;
+            font-style: italic;
+            color: white;
+            list-style: decimal;
+        }
+        
+        .par-type-five {
+            font-size: 15px;
+            font-weight: bold;
+            font-style: italic;
+            margin-top: 80px;
+            text-align: center;
+            color: blue;
+        }
+        
+        .par-type-six {
+            font-family: Impact, sans-serif;
+            font-size: 30px;
+            margin-top: 15px;
+            text-align: center;
+        }
+        
+        .par-type-nine {
+            font-size: 20px;
+            margin-top: 20px;
+            font-family: Impact, sans-serif;
+            padding-bottom: 10px;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        .par-type-ten {
+            font-style: italic;
+            font-size: 16px;
+            text-align: center;
+        }
+        
+        .par-type-tan {
+            font-style: italic;
+            font-size: 16px;
+            margin-top: -7px;
+            text-align: center;
+        }
+        
+        .txt-one {
+            color: black;
+            font-weight: bold;
+            text-align: center;
+            font-size: 35px;
+            font-style: italic;
+            margin-left: _px;
+            margin-top: 650px;
+        }
+        
+        .main-txt {}
+        
+        .txt-two {
+            color: black;
+            font-weight: bold;
+            font-size: 35px;
+            text-align: center;
+            margin-top: -37px;
+            margin-left: _px;
+            font-style: italic;
+        }
+        
+        .txt-three {
+            color: black;
+            margin-top: -20px;
+            font-size: 18px;
+            text-align: center;
+            font-style: italic;
+        }
+        
+        .txt-four {
+            color: black;
+            font-size: 18px;
+            margin-top: -15px;
+            text-align: center;
+            font-style: italic;
+        }
+        
+        .txt-five {
+            color: black;
+            font-size: 19px;
+            margin-top: -10px;
+            text-align: center;
+            font-weight: bold;
+            font-style: italic;
+        }
+        
+        .img-tst-one {
+            zoom: 0.5;
+            text-align: end;
+            margin-top: 100px;
+            border-radius: 20px;
+        }
+        
+        .parag-one {
+            font-size: 35px;
+            font-family: Impact, sans-serif;
+            margin-top: 160px;
+            margin-left: 24px;
+            color: white;
+            position: absolute;
+        }
+        
+        .parag-two {
+            font-size: 35px;
+            margin-left: 45px;
+            margin-top: 197px;
+            color: white;
+            font-family: Impact, sans-serif;
+            position: absolute;
+        }
+        
+        .parag-three {
+            font-size: 35px;
+            margin-right: _px;
+            margin-left: 25px;
+            font-family: Impact, sans-serif;
+            margin-top: 230px;
+            color: white;
+            position: absolute;
+        }
+        
+        .para-one {
+            color: white;
+            font-size: 20px;
+            margin-right: _px;
+            margin-left: 60px;
+            font-weight: bold;
+            text-decoration: 3px underline blue;
+            position: absolute;
+            margin-top: 290px;
+        }
+        
+        .para-two {
+            color: white;
+            font-size: 17px;
+            font-style: italic;
+            margin-top: 330px;
+            position: absolute;
+            margin-left: 85px;
+        }
+        
+        .para-three {
+            color: white;
+            font-size: 17px;
+            font-style: italic;
+            margin-top: 350px;
+            position: absolute;
+            margin-left: 85px;
+        }
+        
+        .para-four {
+            color: white;
+            font-size: 17px;
+            font-style: italic;
+            margin-top: 370px;
+            position: absolute;
+            margin-left: 95px;
+        }
+        
+        .para-five {
+            color: white;
+            font-size: 18px;
+            font-style: italic;
+            margin-top: 400px;
+            position: absolute;
+            font-weight: bold;
+            margin-left: 105px;
+        }
+        
+        h1 {
+            color: #2531e1;
+            font-size: 22px;
+            margin-left: 15px;
+            margin-top: 35px;
+            font-style: italic;
+        }
+        
+        h2 {
+            color: white;
+            font-size: 25px;
+            font-family: "Cabri", sans-serif;
+            margin-left: 15px;
+            margin-top: -15px;
+        }
+        
+        .live-plug {
+            width: 230px;
+            height: 55px;
+            border: 2.5px solid white;
+            background-color: transparent;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 20px;
+            margin-left: 45px;
+            position: absolute;
+            border-radius: 20px;
+            cursor: pointer;
+            /* Often added for buttons */
+            transition: background-color 0.3s, color 0.3s;
+            /* Smooth transition */
+        }
+        
+        .live-plug:hover {
+            background-color: #0c0c0c;
+            /* Change background on hover */
+            color: white;
+            /* Change text color on hover */
+        }
+        
+        .img-type-one {
+            zoom: 1.2;
+            text-align: center;
+            margin-top: 40px;
+            padding-bottom: 10px;
+            left: 50%;
+            transform: translateX(155%);
+        }
+        
+        .dot-rep {
+            text-align: start;
+            margin-left: 66px;
+            margin-top: -145px;
+        }
+        
+        .dot-rep li {
+            list-style: none;
+            display: inline-block;
+        }
+        
+        .dot-class {
+            color: white;
+            font-size: 65px;
+        }
+        
+        .nav-in-one {
+            zoom: 0.55;
+            position: absolute;
+            margin-top: 140px;
+            left: 10%;
+            transform: translateX(-5%);
+        }
+        
+        .nav-in-one li {
+            list-style: none;
+            margin-left: -20px;
+            display: inline-block;
+        }
+        
+        .nav-str {
+            color: white;
+            margin-top: -95px;
+            position: absolute;
+            margin-left: _px;
+        }
+        
+        .nav-str li {
+            list-style: none;
+            display: inline-block;
+        }
+        
+        .nav-str-one {
+            margin-left: -45px;
+        }
+        
+        .nav-str-two {
+            margin-left: -13px;
+        }
+        
+        .nav-str-three {
+            margin-left: -16px;
+        }
+        
+        .nav-str-one li {
+            list-style: none;
+            display: flex;
+        }
+        
+        .nav-str-two li {
+            list-style: none;
+            display: flex;
+        }
+        
+        .nav-str-three li {
+            list-style: none;
+            display: flex;
+        }
+        
+        .nav-type-three {
+            margin-top: 10px;
+            margin-left: -50px;
+        }
+        
+        .nav-type-three li {
+            list-style: none;
+            padding: 10px;
+            display: flex;
+        }
+        
+        .div-type-six {
+            width: 350px;
+            height: 400px;
+            background-color: transparent;
+        }
+        
+        .list-par-one {
+            font-size: 11px;
+        }
+        
+        .sp-three {
+            font-size: 15px;
+        }
+        
+        .sp-four {
+            font-size: 15px;
+        }
+        
+        .sp-five {
+            font-size: 15px;
+        }
+        
+        .list-is {
+            font-size: 9px;
+        }
+        
+        .list-par-two {
+            font-size: 11px;
+        }
+        
+        .list-par-three {
+            font-size: 11px;
+        }
+        
+        .img-tro-one {
+            zoom: 0.6;
+            margin-top: -18px;
+            text-align: end;
+            left: 50%;
+            transform: translateX(625%);
+        }
+        
+        .test-two {
+            /* this is for the main text */
+            font-size: 35px;
+            font-style: italic;
+            font-weight: bold;
+            margin-top: 140px;
+            color: #ffffff;
+            margin-left: 20px;
+        }
+        
+        .test-test {
+            /* the subtopic */
+            font-size: 35px;
+            font-style: italic;
+            font-weight: bold;
+            margin-top: -36px;
+            color: #ffffff;
+            margin-left: 20px;
+        }
+        
+        .test-five {
+            /* this is for the test */
+            font-size: 11.5px;
+            font-family: Arial, sans-serif;
+            margin-top: -28px;
+            margin-left: 20px;
+            color: rgb(133, 132, 132);
+            font-weight: bold;
+        }
+        
+        .test-five-test {
+            /* this is the second text */
+            font-size: 11.5px;
+            margin-left: 20px;
+            margin-top: -6px;
+            font-family: Arial, sans-serif;
+            color: rgb(133, 132, 132);
+            font-weight: bold;
+        }
+        
+        .heat-one {
+            zoom: 0.8;
+            margin-left: -61px;
+        }
+        
+        .heat-one nav ul {}
+        
+        .heat-one li {
+            list-style: none;
+            display: inline;
+        }
+        
+        .img-tht-one {
+            zoom: 0.6;
+        }
+        
+        .img-tht-two {
+            zoom: 0.7;
+        }
+        
+        .nav-tht-one {
+            margin-top: 32px;
+            text-align: end;
+        }
+        
+        .nav-tht-one li {
+            list-style: none;
+            padding: 6px;
+            display: inline-block;
+        }
+        
+        .par-type-one {
+            font-size: 12px;
+            color: white;
+        }
+        
+        .par-type-two {
+            font-size: 12px;
+            color: white;
+            margin-top: -10px;
+        }
+        
+        .par-type-three {
+            font-size: 12px;
+            margin-top: -10px;
+            color: white;
+        }
+        
+        .play-that {
+            /* this is for the test subject */
+            zoom: 0.17;
+            margin-top: 100px;
+            position: absolute;
+        }
+        
+        .div-launch {
+            /* For the header page to be recognized */
+            background-color: rgba(0, 0, 0, 0.70);
+            position: absolute;
+            margin: 0;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 480px;
+        }
+        
+        .test-one {
+            /* For the header page to be recognized */
+            background: url("./Pictures/sunday_service.jpg") no-repeat center center;
+            background-size: cover;
+            position: absolute;
+            margin: 0;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 480px;
+        }
+        
+        .launch-one {
+            /* For the header page to be recognized */
+            background-color: rgba(0, 0, 0, 0.5);
+            position: fixed;
+            margin: 0;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 120px;
+            z-index: 1;
+        }
+        
+        .footer-container {
+            /* this is for the footer display */
+            left: 0;
+            margin: 0;
+            margin-top: 420px;
+            width: 100%;
+            height: 375px;
+            position: absolute;
+            background-color: black;
+            padding-top: 50px;
+        }
+    </style>
+    <script>
+        const DivOne = document.querySelector('.test-one');
+        const ImgaesOne = [
+            './Pictures/image_play.jpg',
+            './Pictures/main_play.gif',
+            './Pictures/sunday_school.jpg',
+            './Pictures/main_two.gif',
+            './Pictures/sunday_service.jpg',
+
+        ];
+        let currentImageIndex = 0;
+
+        setInterval(() => {
+            DivOne.style.backgroundImage = `url(${ImgaesOne[currentImageIndex]})`;
+
+
+            currentImageIndex = (currentImageIndex + 1) % ImgaesOne.length;
+        }, 32000); // 3000 milliseconds = 9 seconds
+
+
+
+
+        const MonCont = document.querySelector('.sp-three');
+        const TargetValue = 200;
+        const Duration = 30000; // 1 second
+
+        function animate() {
+            const interval = Duration / TargetValue;
+            let currentValue = 0;
+            const interValid = setInterval(() => {
+                MonCont.textContent = `${currentValue}`;
+                currentValue++;
+                if (currentValue > TargetValue) {
+                    clearInterval(interValid);
+                    // restart the animation after a short delay
+                    setTimeout(animate, 500); // adjust the delay as needed
+                }
+            }, interval);
+        }
+
+        animate();
+    </script>
+</body>
+
+</html>
