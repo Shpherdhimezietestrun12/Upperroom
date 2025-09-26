@@ -28,7 +28,7 @@
         if (loaded) {
             document.getElementById('load-page').style.display = 'none';
         }
-    }, 20000); // 1000 milliseconds = 1 second
+    }, 0000); // 1000 milliseconds = 1 second
 
     // this is for the color toogle
     let index = 0;
@@ -76,8 +76,49 @@
                                     <div class="sub-reg-div-two">
                                         <img src="./Icons-representations/back.png" class="reg-div-one" id="Reg-test-play">
                                         <p class="reg-par-one">Register for upperroom events here.</p>
-                                        <button class="but-reg-one"><span class="sp-reg-one">SELECT YOUR EVENT</span><img src="./Icons-representations/Untqqqqqqqqqqqqqqitled.png" class="reg-ui-one"></button>
-                                        <button class="but-reg-two"><span class="sp-reg-two">DATE OF THE EVENT</span><img src="./Icons-representations/Untqqqqqqqqqqqqqqitled.png" class="reg-ui-one"></button>
+                                        <button class="but-reg-one" onclick="SignOne()"><span class="sp-reg-one">SELECT YOUR EVENT</span><img src="./Icons-representations/Untqqqqqqqqqqqqqqitled.png" class="reg-ui-one"></button>
+                                        <div class="sign-one-test" style="display: none;">
+                                            <nav class="sign-nav-one">
+                                                <ul>
+                                                    <li>Event 1</li>
+                                                    <li>Event 2</li>
+                                                    <li>Event 3</li>
+                                                    <li>Event 4</li>
+                                                    <li>Event 5</li>
+                                                    <li>Event 6</li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                        <script>
+                                            // code for cont-SignOne...
+                                            function SignOne() {
+                                                var container_four = document.querySelector(".sign-one-test");
+                                                container_four.style.display = container_four.style.display == "block" ? "none" : "block";
+                                            }
+                                        </script>
+                                        <button class="but-reg-two" onclick="SignTwo()"><span class="sp-reg-two">DATE OF THE EVENT</span><img src="./Icons-representations/Untqqqqqqqqqqqqqqitled.png" class="reg-ui-one"></button>
+                                        <div class="sign-two-test" style="display: none;">
+                                            <nav class="sign-nav-two">
+                                                <ul>
+                                                    <li>1/10/2025</li>
+                                                    <li>2/10/2025</li>
+                                                    <li>3/10/2025</li>
+                                                    <li>4/10/2025</li>
+                                                    <li>5/10/2025</li>
+                                                    <li>6/10/2025</li>
+                                                    <li>7/10/2025</li>
+                                                    <li>8/10/2025</li>
+                                                    <li>9/10/2025</li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                        <script>
+                                            // code for cont-SignOne...
+                                            function SignTwo() {
+                                                var container_four = document.querySelector(".sign-two-test");
+                                                container_four.style.display = container_four.style.display == "block" ? "none" : "block";
+                                            }
+                                        </script>
                                         <p class="reg-par-two">Register for your event here on our</p>
                                         <p class="reg-par-three">upperroom platform.</p>
                                         <button class="but-reg-three">REGISTER</button>
@@ -599,25 +640,23 @@
     <nav class="nav-btn-ten">
         <ul>
             <li>
-                <div class="div-min-ooo">
-                    <p class="bul-two">Not Yet Updated</p>
-                </div>
+                <div class="div-min-ooo"></div>
             </li>
             <li>
-                <div class="div-min-oo"></div>
+                <div class="div-min-ooo-2"></div>
             </li>
             <li>
-                <div class="div-min-oo"></div>
+                <div class="div-min-ooo-3"></div>
             </li>
             <li>
-                <div class="div-min-oo"></div>
+                <div class="div-min-ooo-4"></div>
             </li>
             <li>
-                <div class="div-min-oo"></div>
+                <div class="div-min-ooo-5"></div>
             </li>
         </ul>
     </nav>
-    <p class="par-ui-one">More Events Photos</p>
+    <p class="par-ui-one" onclick="PhotosCont()">More Events Photos</p>
     <div class="div-in-one"><button class="btn-10" onclick="LiveContainer()">WATCH HERE</button></div>
     <footer class="footer-container">
         <img src="./Pictures/logo.png" class="fot-img-one">
@@ -892,6 +931,61 @@
             margin-top: -10px;
             margin-left: -170px;
             font-style: italic;
+        }
+        
+        .sign-one-test {
+            width: 200px;
+            height: 340px;
+            background-color: white;
+            position: absolute;
+            z-index: 2;
+            margin-top: 50px;
+            margin-left: 110px;
+        }
+        
+        .sign-two-test {
+            width: 150px;
+            height: 270px;
+            background-color: white;
+            position: absolute;
+            z-index: 2;
+            margin-top: 120px;
+            margin-left: 110px;
+        }
+        
+        .sign-nav-one {
+            position: absolute;
+            font-size: 19px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        
+        .sign-nav-one ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .sign-nav-one li {
+            list-style: none;
+        }
+        
+        .sign-nav-two {
+            position: absolute;
+            font-size: 17px;
+            font-weight: bold;
+            margin-top: 20px;
+            margin-left: -20px;
+        }
+        
+        .sign-nav-two ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .sign-nav-two li {
+            list-style: none;
         }
         
         .menu-div-one {
@@ -1491,12 +1585,48 @@
         }
         
         .nav-btn-ten {
-            margin-top: _px;
+            margin-left: -40px;
+            overflow-x: hidden;
+        }
+        
+        .nav-btn-ten ul {
+            display: flex;
+            flex-wrap: nowrap;
+            width: 200%;
+            /* or a larger value */
+            animation: scroll 15s linear infinite;
+        }
+        
+        .nav-btn-ten ul::-webkit-scrollbar {
+            /* Adjust the height of the scrollbar */
+        }
+        
+        .nav-btn-ten ul::-webkit-scrollbar-thumb {
+            background-color: #ccc;
+            /* Adjust the color of the scrollbar thumb */
+            border-radius: 10px;
+        }
+        
+        .nav-btn-ten ul::-webkit-scrollbar-track {
+            background-color: #f0f0f0;
+            /* Adjust the color of the scrollbar track */
         }
         
         .nav-btn-ten li {
             list-style: none;
-            display: inline-block;
+            padding: 10px;
+        }
+        
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(-150%);
+            }
+            100% {
+                transform: translateX(0);
+            }
         }
         
         .div-in-one {
@@ -1511,15 +1641,14 @@
         
         .par-ui-one {
             text-align: center;
-            margin-top: 70px;
-            font-size: 15px;
+            margin-top: 50px;
+            font-size: 17px;
             color: blue;
         }
         
         .par-ui-one:hover {
             text-align: center;
-            margin-top: 70px;
-            font-size: 15px;
+            font-size: 16px;
             color: black;
         }
         
@@ -1730,7 +1859,6 @@
         .par-1-8 {
             color: white;
             font-size: 15px;
-            margin-left: 18px;
             margin-top: _px;
             text-align: center;
             font-family: "Cabri", sans-serif;
@@ -1742,23 +1870,39 @@
             margin-left: 18px;
             margin-top: -9px;
             border-radius: 10px;
+            padding-left: 15px;
             background-color: #e1e1e1;
             border: 1px solid #e1e1e1;
+            font-size: 17px;
+        }
+        
+        .ipt-1-one:focus {
+            outline: none;
+            border: none;
         }
         
         .ipt-1-two {
             width: 290px;
             height: 36px;
+            font-size: 17px;
             margin-left: 18px;
+            padding-left: 15px;
             margin-top: -9px;
             border-radius: 10px;
             background-color: #e1e1e1;
             border: 1px solid #e1e1e1;
+        }
+        
+        .ipt-1-two:focus {
+            outline: none;
+            border: none;
         }
         
         .ipt-1-three {
             width: 290px;
             height: 36px;
+            font-size: 17px;
+            padding-left: 15px;
             margin-left: 18px;
             margin-top: -9px;
             border-radius: 10px;
@@ -1766,14 +1910,26 @@
             border: 1px solid #e1e1e1;
         }
         
+        .ipt-1-three:focus {
+            outline: none;
+            border: none;
+        }
+        
         .ipt-1-four {
             width: 290px;
             height: 106px;
+            font-size: 17px;
             margin-left: 18px;
+            padding-left: 15px;
             margin-top: -9px;
             border-radius: 10px;
             background-color: #e1e1e1;
             border: 1px solid #e1e1e1;
+        }
+        
+        .ipt-1-four:focus {
+            outline: none;
+            border: none;
         }
         
         .but-play {
@@ -2201,9 +2357,42 @@
         }
         
         .div-min-ooo {
-            width: 250px;
-            height: 350px;
-            background-color: transparent;
+            width: 270px;
+            height: 300px;
+            background-image: url('./Pictures/test_one/WhatsApp\ Image\ 2025-09-24\ at\ 18.55.40_131014b2.jpg');
+            background-size: cover;
+            color: white;
+        }
+        
+        .div-min-ooo-2 {
+            width: 270px;
+            height: 300px;
+            background-image: url('./Pictures/test_one/WhatsApp\ Image\ 2025-09-24\ at\ 18.55.41_b44cd8c8.jpg');
+            background-size: cover;
+            color: white;
+        }
+        
+        .div-min-ooo-3 {
+            width: 270px;
+            height: 300px;
+            background-image: url('./Pictures/test_one/WhatsApp\ Image\ 2025-09-24\ at\ 18.55.43_243d95ea.jpg');
+            background-size: cover;
+            color: white;
+        }
+        
+        .div-min-ooo-4 {
+            width: 270px;
+            height: 300px;
+            background-image: url('./Pictures/test_one/WhatsApp\ Image\ 2025-09-24\ at\ 18.55.43_85224eef.jpg');
+            background-size: cover;
+            color: white;
+        }
+        
+        .div-min-ooo-5 {
+            width: 270px;
+            height: 300px;
+            background-image: url('./Pictures/test_one/WhatsApp\ Image\ 2025-09-24\ at\ 18.55.44_3f7dc94b.jpg');
+            background-size: cover;
             color: white;
         }
         
@@ -2765,7 +2954,7 @@
         
         .dot-rep {
             text-align: start;
-            margin-left: 66px;
+            margin-left: 115px;
             margin-top: -145px;
         }
         
@@ -2777,6 +2966,8 @@
         .dot-class {
             color: white;
             font-size: 65px;
+            margin-top: 55px;
+            margin-left: -5px;
         }
         
         .nav-in-one {
