@@ -645,12 +645,21 @@
     </footer>
 
     <div class="page-one">
-        <img src="./Icons-representations/icons8-cancel-100.png" class="page-test-one">
+        <img src="./Icons-representations/icons8-cancel-100.png" class="page-test-one" id="page-test-id">
         <button class="page-test-two" onclick="SetCont()">Give Offering 🙌🏿</button>
         <button class="page-test-three" onclick="ProjCont()">Project support 👨🏿‍🔧</button>
         <button class="page-test-four" onclick="PhotosCont()">View Events Here 💫</button>
         <button class="page-test-five">Advertise upperroom ✨</button>
     </div>
+    <script>
+        // this is for the exit sequence...
+        document.getElementById('page-test-id').addEventListener('click', function() {
+            var menuDiv = document.querySelector('.page-one');
+            if (menuDiv) {
+                menuDiv.style.display = menuDiv.style.display === 'none' ? '' : 'none';
+            }
+        });
+    </script>
     <style>
         /*please tomorrow ensure u change some of the font-sizes for the comuter set up too this pls  font-family: Arial, sans-serif;*/
         
