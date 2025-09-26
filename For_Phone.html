@@ -28,7 +28,7 @@
         if (loaded) {
             document.getElementById('load-page').style.display = 'none';
         }
-    }, 25000); // 1000 milliseconds = 1 second
+    }, 20000); // 1000 milliseconds = 1 second
 
     // this is for the color toogle
     let index = 0;
@@ -56,7 +56,7 @@
                 </div>
                 <nav class="nav-tht-one">
                     <ul>
-                        <li><img src="./Icons-representations/icons8-whatsapp-80.png" class="img-tht-one"></li>
+                        <li><img src="./Icons-representations/icons8-whatsapp-80.png" class="img-tht-one" onclick="window.location.href='https://wa.me/7034243241';"></li>
                         <li><img src="./Icons-representations/menufowwwwwwww - Co22py.png" class="img-tht-two" onclick="MenuContainer()"></li>
                         <div class="menu-bar" style="display: none;">
                             <img src="./Icons-representations/back.png" class="menu-bar-img" id='Seq-back'>
@@ -643,6 +643,14 @@
         <p class="par-btt-ten">_____________________________________________________________________________</p>
         <p class="par-btt-in"><img>Copyright 2025 - RCCG - Throne Of Mercy</p>
     </footer>
+
+    <div class="page-one">
+        <img src="./Icons-representations/icons8-cancel-100.png" class="page-test-one">
+        <button class="page-test-two" onclick="SetCont()">Give Offering 🙌🏿</button>
+        <button class="page-test-three" onclick="ProjCont()">Project support 👨🏿‍🔧</button>
+        <button class="page-test-four" onclick="PhotosCont()">View Events Here 💫</button>
+        <button class="page-test-five">Advertise upperroom ✨</button>
+    </div>
     <style>
         /*please tomorrow ensure u change some of the font-sizes for the comuter set up too this pls  font-family: Arial, sans-serif;*/
         
@@ -687,6 +695,106 @@
             color: #555555;
         }
         
+        .page-one {
+            width: 260px;
+            height: 270px;
+            right: 0;
+            position: fixed;
+            bottom: 0;
+            background-color: transparent;
+        }
+        
+        .page-test-one {
+            zoom: 0.3;
+            top: 15px;
+            right: 15px;
+            position: absolute;
+        }
+        
+        .page-test-two {
+            width: 150px;
+            height: 40px;
+            background-color: #e8e4e1;
+            font-size: 15px;
+            margin-top: 60px;
+            border-radius: 10px;
+            position: absolute;
+            font-weight: bold;
+            border: 0.5px solid black;
+            right: 15px;
+            font-family: "Cabri", sans-serif;
+        }
+        
+        .page-test-two:hover {
+            background-color: #0c0c0c;
+            /* Change background on hover */
+            color: white;
+            /* Change text color on hover */
+        }
+        
+        .page-test-three {
+            width: 180px;
+            height: 40px;
+            background-color: white;
+            font-size: 15px;
+            position: absolute;
+            margin-top: 110px;
+            right: 15px;
+            border-radius: 10px;
+            font-weight: bold;
+            border: 0.5px solid black;
+            font-family: "Cabri", sans-serif;
+        }
+        
+        .page-test-three:hover {
+            background-color: #0c0c0c;
+            /* Change background on hover */
+            color: white;
+            /* Change text color on hover */
+        }
+        
+        .page-test-four {
+            width: 190px;
+            height: 40px;
+            background-color: #e8e4e1;
+            font-size: 15px;
+            position: absolute;
+            margin-top: 160px;
+            right: 15px;
+            border-radius: 10px;
+            font-weight: bold;
+            border: 0.5px solid black;
+            font-family: "Cabri", sans-serif;
+        }
+        
+        .page-test-four:hover {
+            background-color: #0c0c0c;
+            /* Change background on hover */
+            color: white;
+            /* Change text color on hover */
+        }
+        
+        .page-test-five {
+            width: 210px;
+            height: 40px;
+            background-color: white;
+            font-size: 15px;
+            position: absolute;
+            margin-top: 210px;
+            right: 15px;
+            border-radius: 10px;
+            font-weight: bold;
+            border: 0.5px solid black;
+            font-family: "Cabri", sans-serif;
+        }
+        
+        .page-test-five:hover {
+            background-color: #0c0c0c;
+            /* Change background on hover */
+            color: white;
+            /* Change text color on hover */
+        }
+        
         .menu-bar {
             width: 85%;
             height: 700px;
@@ -713,11 +821,14 @@
         }
         
         .par-btn-100 {
-            font-size: 16px;
+            font-size: 18px;
             cursor: pointer;
             /* Often added for buttons */
             transition: background-color 0.3s, color 0.3s;
             /* Smooth transition */
+            position: relative;
+            top: -1.5px;
+            /* Adjust this value to move the text up or down */
         }
         
         .par-btn-100:hover {
@@ -1357,11 +1468,13 @@
             margin-top: 455px;
             position: relative;
             border-radius: 20px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         .div-btn-one {
             width: 100%;
-            margin-top: 90px;
+            margin-top: 120px;
             height: 2200px;
             left: 0;
             position: absolute;
@@ -2124,8 +2237,10 @@
         .img-ply-one {
             zoom: 0.72;
             margin-top: 45px;
-            margin-left: 15px;
             border-radius: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         .plc-one {
@@ -2195,15 +2310,17 @@
             font-weight: bold;
             left: 50%;
             border: 2px solid black;
-            transform: translateX(76%);
+            transform: translateX(-50%);
+            position: absolute;
             cursor: pointer;
             /* Often added for buttons */
             transition: background-color 0.3s, color 0.3s;
             /* Smooth transition */
+            /* Add space from the bottom */
         }
         
         .btn-1:hover {
-            background-color: #1b1b1b;
+            background-color: #8b2626;
             border: 2px solid #1b1b1b;
             /* Change background on hover */
             color: white;
@@ -2266,7 +2383,7 @@
             font-family: "Cabri", sans-serif;
             font-weight: bolder;
             font-size: 13.5px;
-            margin-top: 22px;
+            margin-top: 15px;
             left: 65%;
             transform: translateX(80%);
             border: 2px solid black;
@@ -2363,6 +2480,9 @@
             zoom: 0.26;
             margin-top: _px;
             border-radius: 30px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         .img-tell-one {
@@ -2377,7 +2497,7 @@
             border: 2px solid #0b138d;
             border-radius: 20px;
             font-size: 12px;
-            margin-top: 5px;
+            margin-top: _px;
             font-weight: bold;
             left: 50%;
             transform: translateX(60%);
@@ -2495,37 +2615,45 @@
         
         .img-tst-one {
             zoom: 0.5;
-            text-align: end;
             margin-top: 100px;
             border-radius: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         .parag-one {
             font-size: 30px;
             font-family: Impact, sans-serif;
             margin-top: 160px;
-            margin-left: 45px;
             color: white;
             position: absolute;
+            left: 0;
+            right: 0;
+            text-align: center;
         }
         
         .parag-two {
             font-size: 30px;
-            margin-left: 63px;
             margin-top: 197px;
             color: white;
             font-family: Impact, sans-serif;
             position: absolute;
+            left: 0;
+            right: 0;
+            text-align: center;
         }
         
         .parag-three {
             font-size: 30px;
             margin-right: _px;
-            margin-left: 45px;
             font-family: Impact, sans-serif;
             margin-top: 230px;
-            color: white;
             position: absolute;
+            color: white;
+            left: 0;
+            right: 0;
+            text-align: center;
         }
         
         .para-one {
